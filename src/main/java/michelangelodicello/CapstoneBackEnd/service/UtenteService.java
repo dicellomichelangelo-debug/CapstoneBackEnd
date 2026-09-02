@@ -30,8 +30,8 @@ public class UtenteService {
 
     public Utente update(Long id, Utente updatedUser) {
         Utente found = this.getById(id);
-        found.setFirstName(updatedUser.getFirstName());
-        found.setLastName(updatedUser.getLastName());
+        found.setNome(updatedUser.getNome());
+        found.setCognome(updatedUser.getCognome());
         found.setEmail(updatedUser.getEmail());
         return utenteRepository.save(found);
     }

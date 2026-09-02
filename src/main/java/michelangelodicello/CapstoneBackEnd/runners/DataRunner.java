@@ -1,6 +1,5 @@
 package michelangelodicello.CapstoneBackEnd.runners;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import michelangelodicello.CapstoneBackEnd.entities.Categoria;
 import michelangelodicello.CapstoneBackEnd.entities.Prodotto;
 import michelangelodicello.CapstoneBackEnd.entities.Utente;
@@ -13,6 +12,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import tools.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
 import java.util.HashMap;

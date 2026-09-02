@@ -72,8 +72,14 @@
       "rating": 4.9,
       "reviews": 142,
       "offers": 4,
-      "price": 2399.00,
-      "specs": "{\"processor\":\"Apple M3 Pro\",\"ram\":\"18 GB Unified\",\"storage\":\"512 GB SSD\",\"display\":\"14.2\\\" Liquid Retina XDR\",\"weight\":\"1.61 kg\"}"
+      "price": 2399.0,
+      "specs": {
+        "processor": "Apple M3 Pro",
+        "ram": "18 GB Unified",
+        "storage": "512 GB SSD",
+        "display": "14.2\" Liquid Retina XDR",
+        "weight": "1.61 kg"
+      }
     },
     {
       "externalId": 2,
@@ -85,8 +91,14 @@
       "rating": 4.7,
       "reviews": 89,
       "offers": 6,
-      "price": 2899.00,
-      "specs": "{\"processor\":\"Intel Core i9-14900HX\",\"gpu\":\"NVIDIA RTX 4080 12GB\",\"ram\":\"32 GB DDR5\",\"storage\":\"1 TB NVMe SSD\",\"display\":\"16\\\" OLED 240Hz\"}"
+      "price": 2899.0,
+      "specs": {
+        "processor": "Intel Core i9-14900HX",
+        "gpu": "NVIDIA RTX 4080 12GB",
+        "ram": "32 GB DDR5",
+        "storage": "1 TB NVMe SSD",
+        "display": "16\" OLED 240Hz"
+      }
     },
     {
       "externalId": 3,
@@ -98,8 +110,14 @@
       "rating": 4.8,
       "reviews": 56,
       "offers": 2,
-      "price": 1950.00,
-      "specs": "{\"processor\":\"AMD Ryzen 7 7800X3D\",\"gpu\":\"RTX 4070 Ti Super 16GB\",\"ram\":\"32 GB DDR5 6000MHz\",\"storage\":\"2 TB NVMe SSD\",\"cooling\":\"Liquido 360mm\"}"
+      "price": 1950.0,
+      "specs": {
+        "processor": "AMD Ryzen 7 7800X3D",
+        "gpu": "RTX 4070 Ti Super 16GB",
+        "ram": "32 GB DDR5 6000MHz",
+        "storage": "2 TB NVMe SSD",
+        "cooling": "Liquido 360mm"
+      }
     },
     {
       "externalId": 4,
@@ -111,8 +129,13 @@
       "rating": 4.6,
       "reviews": 210,
       "offers": 8,
-      "price": 849.00,
-      "specs": "{\"resolution\":\"2560 x 1440 (QHD)\",\"refreshRate\":\"240 Hz\",\"panelType\":\"OLED\",\"responseTime\":\"0.03 ms\"}"
+      "price": 849.0,
+      "specs": {
+        "resolution": "2560 x 1440 (QHD)",
+        "refreshRate": "240 Hz",
+        "panelType": "OLED",
+        "responseTime": "0.03 ms"
+      }
     },
     {
       "externalId": 5,
@@ -124,8 +147,13 @@
       "rating": 4.8,
       "reviews": 312,
       "offers": 3,
-      "price": 99.90,
-      "specs": "{\"type\":\"Meccanica Bluetooth/USB\",\"switches\":\"Gateron Brown\",\"layout\":\"75% Italiano\",\"battery\":\"4000 mAh\"}"
+      "price": 99.9,
+      "specs": {
+        "type": "Meccanica Bluetooth/USB",
+        "switches": "Gateron Brown",
+        "layout": "75% Italiano",
+        "battery": "4000 mAh"
+      }
     },
     {
       "externalId": 101,
@@ -137,8 +165,13 @@
       "rating": 4.9,
       "reviews": 128,
       "offers": 3,
-      "price": 399.00,
-      "specs": "{\"socket\":\"AM5\",\"ramType\":\"DDR5\",\"tdp\":120,\"cores\":\"8C / 16T\"}"
+      "price": 399.0,
+      "specs": {
+        "socket": "AM5",
+        "ramType": "DDR5",
+        "tdp": 120,
+        "cores": "8C / 16T"
+      }
     },
     {
       "externalId": 102,
@@ -150,8 +183,13 @@
       "rating": 4.8,
       "reviews": 95,
       "offers": 5,
-      "price": 429.00,
-      "specs": "{\"socket\":\"LGA1700\",\"ramType\":\"DDR5\",\"tdp\":125,\"cores\":\"20C / 28T\"}"
+      "price": 429.0,
+      "specs": {
+        "socket": "LGA1700",
+        "ramType": "DDR5",
+        "tdp": 125,
+        "cores": "20C / 28T"
+      }
     },
     {
       "externalId": 103,
@@ -163,8 +201,13 @@
       "rating": 4.7,
       "reviews": 210,
       "offers": 4,
-      "price": 145.00,
-      "specs": "{\"socket\":\"AM4\",\"ramType\":\"DDR4\",\"tdp\":65,\"cores\":\"6C / 12T\"}"
+      "price": 145.0,
+      "specs": {
+        "socket": "AM4",
+        "ramType": "DDR4",
+        "tdp": 65,
+        "cores": "6C / 12T"
+      }
     },
     {
       "externalId": 104,
@@ -176,8 +219,13 @@
       "rating": 4.6,
       "reviews": 180,
       "offers": 6,
-      "price": 135.00,
-      "specs": "{\"socket\":\"LGA1700\",\"ramType\":\"DDR4\",\"tdp\":65,\"cores\":\"6C / 12T\"}"
+      "price": 135.0,
+      "specs": {
+        "socket": "LGA1700",
+        "ramType": "DDR4",
+        "tdp": 65,
+        "cores": "6C / 12T"
+      }
     },
     {
       "externalId": 105,
@@ -189,8 +237,13 @@
       "rating": 4.9,
       "reviews": 78,
       "offers": 2,
-      "price": 589.00,
-      "specs": "{\"socket\":\"LGA1700\",\"ramType\":\"DDR5\",\"tdp\":253,\"cores\":\"24C / 32T\"}"
+      "price": 589.0,
+      "specs": {
+        "socket": "LGA1700",
+        "ramType": "DDR5",
+        "tdp": 253,
+        "cores": "24C / 32T"
+      }
     },
     {
       "externalId": 106,
@@ -202,8 +255,13 @@
       "rating": 4.9,
       "reviews": 64,
       "offers": 3,
-      "price": 649.00,
-      "specs": "{\"socket\":\"AM5\",\"ramType\":\"DDR5\",\"tdp\":120,\"cores\":\"16C / 32T\"}"
+      "price": 649.0,
+      "specs": {
+        "socket": "AM5",
+        "ramType": "DDR5",
+        "tdp": 120,
+        "cores": "16C / 32T"
+      }
     },
     {
       "externalId": 201,
@@ -215,8 +273,12 @@
       "rating": 4.7,
       "reviews": 64,
       "offers": 2,
-      "price": 249.00,
-      "specs": "{\"socket\":\"AM5\",\"ramType\":\"DDR5\",\"formFactor\":\"ATX\"}"
+      "price": 249.0,
+      "specs": {
+        "socket": "AM5",
+        "ramType": "DDR5",
+        "formFactor": "ATX"
+      }
     },
     {
       "externalId": 202,
@@ -228,8 +290,12 @@
       "rating": 4.8,
       "reviews": 42,
       "offers": 4,
-      "price": 289.00,
-      "specs": "{\"socket\":\"LGA1700\",\"ramType\":\"DDR5\",\"formFactor\":\"ATX\"}"
+      "price": 289.0,
+      "specs": {
+        "socket": "LGA1700",
+        "ramType": "DDR5",
+        "formFactor": "ATX"
+      }
     },
     {
       "externalId": 203,
@@ -241,8 +307,12 @@
       "rating": 4.6,
       "reviews": 155,
       "offers": 3,
-      "price": 119.00,
-      "specs": "{\"socket\":\"AM4\",\"ramType\":\"DDR4\",\"formFactor\":\"ATX\"}"
+      "price": 119.0,
+      "specs": {
+        "socket": "AM4",
+        "ramType": "DDR4",
+        "formFactor": "ATX"
+      }
     },
     {
       "externalId": 204,
@@ -254,8 +324,12 @@
       "rating": 4.5,
       "reviews": 92,
       "offers": 2,
-      "price": 139.00,
-      "specs": "{\"socket\":\"LGA1700\",\"ramType\":\"DDR4\",\"formFactor\":\"Micro-ATX\"}"
+      "price": 139.0,
+      "specs": {
+        "socket": "LGA1700",
+        "ramType": "DDR4",
+        "formFactor": "Micro-ATX"
+      }
     },
     {
       "externalId": 205,
@@ -267,8 +341,12 @@
       "rating": 4.7,
       "reviews": 31,
       "offers": 1,
-      "price": 215.00,
-      "specs": "{\"socket\":\"AM5\",\"ramType\":\"DDR5\",\"formFactor\":\"Mini-ITX\"}"
+      "price": 215.0,
+      "specs": {
+        "socket": "AM5",
+        "ramType": "DDR5",
+        "formFactor": "Mini-ITX"
+      }
     },
     {
       "externalId": 301,
@@ -280,8 +358,12 @@
       "rating": 4.9,
       "reviews": 210,
       "offers": 6,
-      "price": 129.00,
-      "specs": "{\"ramType\":\"DDR5\",\"capacity\":\"32 GB\",\"speed\":\"6000 MHz\"}"
+      "price": 129.0,
+      "specs": {
+        "ramType": "DDR5",
+        "capacity": "32 GB",
+        "speed": "6000 MHz"
+      }
     },
     {
       "externalId": 302,
@@ -293,8 +375,12 @@
       "rating": 4.9,
       "reviews": 64,
       "offers": 2,
-      "price": 249.00,
-      "specs": "{\"ramType\":\"DDR5\",\"capacity\":\"64 GB\",\"speed\":\"6400 MHz\"}"
+      "price": 249.0,
+      "specs": {
+        "ramType": "DDR5",
+        "capacity": "64 GB",
+        "speed": "6400 MHz"
+      }
     },
     {
       "externalId": 303,
@@ -306,8 +392,12 @@
       "rating": 4.8,
       "reviews": 540,
       "offers": 8,
-      "price": 45.00,
-      "specs": "{\"ramType\":\"DDR4\",\"capacity\":\"16 GB\",\"speed\":\"3200 MHz\"}"
+      "price": 45.0,
+      "specs": {
+        "ramType": "DDR4",
+        "capacity": "16 GB",
+        "speed": "3200 MHz"
+      }
     },
     {
       "externalId": 304,
@@ -319,8 +409,12 @@
       "rating": 4.7,
       "reviews": 180,
       "offers": 4,
-      "price": 79.00,
-      "specs": "{\"ramType\":\"DDR4\",\"capacity\":\"32 GB\",\"speed\":\"3600 MHz\"}"
+      "price": 79.0,
+      "specs": {
+        "ramType": "DDR4",
+        "capacity": "32 GB",
+        "speed": "3600 MHz"
+      }
     },
     {
       "externalId": 401,
@@ -332,8 +426,11 @@
       "rating": 4.9,
       "reviews": 150,
       "offers": 3,
-      "price": 889.00,
-      "specs": "{\"vram\":\"16 GB GDDR6X\",\"tdp\":285}"
+      "price": 889.0,
+      "specs": {
+        "vram": "16 GB GDDR6X",
+        "tdp": 285
+      }
     },
     {
       "externalId": 402,
@@ -345,8 +442,11 @@
       "rating": 4.6,
       "reviews": 88,
       "offers": 4,
-      "price": 329.00,
-      "specs": "{\"vram\":\"8 GB GDDR6\",\"tdp\":115}"
+      "price": 329.0,
+      "specs": {
+        "vram": "8 GB GDDR6",
+        "tdp": 115
+      }
     },
     {
       "externalId": 403,
@@ -358,8 +458,11 @@
       "rating": 4.9,
       "reviews": 95,
       "offers": 1,
-      "price": 1899.00,
-      "specs": "{\"vram\":\"24 GB GDDR6X\",\"tdp\":450}"
+      "price": 1899.0,
+      "specs": {
+        "vram": "24 GB GDDR6X",
+        "tdp": 450
+      }
     },
     {
       "externalId": 404,
@@ -371,8 +474,11 @@
       "rating": 4.8,
       "reviews": 112,
       "offers": 3,
-      "price": 529.00,
-      "specs": "{\"vram\":\"16 GB GDDR6\",\"tdp\":263}"
+      "price": 529.0,
+      "specs": {
+        "vram": "16 GB GDDR6",
+        "tdp": 263
+      }
     },
     {
       "externalId": 405,
@@ -384,8 +490,11 @@
       "rating": 4.8,
       "reviews": 73,
       "offers": 2,
-      "price": 999.00,
-      "specs": "{\"vram\":\"24 GB GDDR6\",\"tdp\":355}"
+      "price": 999.0,
+      "specs": {
+        "vram": "24 GB GDDR6",
+        "tdp": 355
+      }
     },
     {
       "externalId": 501,
@@ -397,8 +506,11 @@
       "rating": 4.8,
       "reviews": 88,
       "offers": 4,
-      "price": 139.00,
-      "specs": "{\"wattage\":850,\"efficiency\":\"80 Plus Gold\"}"
+      "price": 139.0,
+      "specs": {
+        "wattage": 850,
+        "efficiency": "80 Plus Gold"
+      }
     },
     {
       "externalId": 502,
@@ -410,8 +522,11 @@
       "rating": 4.5,
       "reviews": 112,
       "offers": 2,
-      "price": 65.00,
-      "specs": "{\"wattage\":650,\"efficiency\":\"80 Plus Bronze\"}"
+      "price": 65.0,
+      "specs": {
+        "wattage": 650,
+        "efficiency": "80 Plus Bronze"
+      }
     },
     {
       "externalId": 503,
@@ -423,8 +538,11 @@
       "rating": 4.9,
       "reviews": 140,
       "offers": 3,
-      "price": 189.00,
-      "specs": "{\"wattage\":1000,\"efficiency\":\"80 Plus Gold\"}"
+      "price": 189.0,
+      "specs": {
+        "wattage": 1000,
+        "efficiency": "80 Plus Gold"
+      }
     },
     {
       "externalId": 504,
@@ -436,8 +554,11 @@
       "rating": 4.3,
       "reviews": 95,
       "offers": 1,
-      "price": 45.00,
-      "specs": "{\"wattage\":500,\"efficiency\":\"80 Plus\"}"
+      "price": 45.0,
+      "specs": {
+        "wattage": 500,
+        "efficiency": "80 Plus"
+      }
     },
     {
       "externalId": 601,
@@ -449,8 +570,12 @@
       "rating": 4.9,
       "reviews": 340,
       "offers": 5,
-      "price": 179.00,
-      "specs": "{\"type\":\"NVMe M.2 SSD\",\"capacity\":\"2 TB\",\"readSpeed\":\"7450 MB/s\"}"
+      "price": 179.0,
+      "specs": {
+        "type": "NVMe M.2 SSD",
+        "capacity": "2 TB",
+        "readSpeed": "7450 MB/s"
+      }
     },
     {
       "externalId": 602,
@@ -462,8 +587,12 @@
       "rating": 4.7,
       "reviews": 280,
       "offers": 4,
-      "price": 72.00,
-      "specs": "{\"type\":\"NVMe M.2 SSD\",\"capacity\":\"1 TB\",\"readSpeed\":\"5000 MB/s\"}"
+      "price": 72.0,
+      "specs": {
+        "type": "NVMe M.2 SSD",
+        "capacity": "1 TB",
+        "readSpeed": "5000 MB/s"
+      }
     },
     {
       "externalId": 603,
@@ -475,8 +604,12 @@
       "rating": 4.9,
       "reviews": 115,
       "offers": 2,
-      "price": 369.00,
-      "specs": "{\"type\":\"NVMe M.2 SSD\",\"capacity\":\"4 TB\",\"readSpeed\":\"7300 MB/s\"}"
+      "price": 369.0,
+      "specs": {
+        "type": "NVMe M.2 SSD",
+        "capacity": "4 TB",
+        "readSpeed": "7300 MB/s"
+      }
     },
     {
       "externalId": 701,
@@ -488,8 +621,15 @@
       "rating": 4.8,
       "reviews": 175,
       "offers": 3,
-      "price": 135.00,
-      "specs": "{\"supportedFormFactors\":[\"ATX\",\"Micro-ATX\",\"Mini-ITX\"],\"sidePanel\":\"Vetro Temperato\"}"
+      "price": 135.0,
+      "specs": {
+        "supportedFormFactors": [
+          "ATX",
+          "Micro-ATX",
+          "Mini-ITX"
+        ],
+        "sidePanel": "Vetro Temperato"
+      }
     },
     {
       "externalId": 702,
@@ -501,8 +641,14 @@
       "rating": 4.4,
       "reviews": 230,
       "offers": 5,
-      "price": 59.00,
-      "specs": "{\"supportedFormFactors\":[\"Micro-ATX\",\"Mini-ITX\"],\"sidePanel\":\"Acrilico\"}"
+      "price": 59.0,
+      "specs": {
+        "supportedFormFactors": [
+          "Micro-ATX",
+          "Mini-ITX"
+        ],
+        "sidePanel": "Acrilico"
+      }
     },
     {
       "externalId": 703,
@@ -514,8 +660,13 @@
       "rating": 4.7,
       "reviews": 48,
       "offers": 2,
-      "price": 149.00,
-      "specs": "{\"supportedFormFactors\":[\"Mini-ITX\"],\"sidePanel\":\"Vetro Temperato / Mesh\"}"
+      "price": 149.0,
+      "specs": {
+        "supportedFormFactors": [
+          "Mini-ITX"
+        ],
+        "sidePanel": "Vetro Temperato / Mesh"
+      }
     }
   ]
 }

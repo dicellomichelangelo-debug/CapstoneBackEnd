@@ -11,5 +11,5 @@ import java.util.List;
 public interface OrdineRepository extends JpaRepository<Ordine, Long> {
     List<Ordine> findByUtenteIdOrderByCreatedAtDesc(Long utenteId);
 
-    List<Ordine> findByStatus(StatoOrdine stato);
+    List<Ordine> findByStatoOrdine(StatoOrdine stato);
 }

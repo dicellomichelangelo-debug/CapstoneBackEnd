@@ -26,7 +26,7 @@ public class Carrello {
     @JoinColumn(name = "user_id", unique = true)
     private Utente utente;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "carrello", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ElementiCarrello> items = new ArrayList<>();
 
     @Column(name = "created_at", updatable = false)

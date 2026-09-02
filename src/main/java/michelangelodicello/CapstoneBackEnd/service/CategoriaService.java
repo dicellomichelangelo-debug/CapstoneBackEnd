@@ -26,4 +26,18 @@ public class CategoriaService {
     public Categoria save(Categoria categoria) {
         return categoriaRepository.save(categoria);
     }
+
+    public Categoria update(Long id, Categoria body) {
+        Categoria found = this.getById(id);
+
+        found.setName(body.getName());
+        found.setDisplayName(body.getDisplayName());
+
+        return categoriaRepository.save(found);
+    }
+
+    public void delete(Long id) {
+        Categoria found = this.getById(id);
+        categoriaRepository.delete(found);
+    }
 }

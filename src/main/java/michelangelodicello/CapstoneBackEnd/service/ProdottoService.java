@@ -20,13 +20,39 @@ public class ProdottoService {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
-    public List<Prodotto> getAll(String category, Double maxPrice, String search, Boolean onlyDiscounted, Boolean inStockOnly) {
-        String catFilter = (category != null && !category.trim().isEmpty() && !category.equalsIgnoreCase("all")) ? category : null;
-        String searchFilter = (search != null && !search.trim().isEmpty()) ? search : null;
-        Boolean discountedFilter = (onlyDiscounted != null) ? onlyDiscounted : false;
-        Boolean stockFilter = (inStockOnly != null) ? inStockOnly : false;
+    public List<Prodotto> getAll(
+            String category,
+            Double maxPrice,
+            String search,
+            Boolean onlyDiscounted,
+            Boolean inStockOnly
+    ) {
+        // Evita parametri String null nella query PostgreSQL
+        String catFilter =
+                category != null
+                        && !category.trim().isEmpty()
+                        && !category.equalsIgnoreCase("all")
+                        ? category.trim()
+                        : "all";
 
-        return prodottoRepository.filterProducts(catFilter, maxPrice, searchFilter, discountedFilter, stockFilter);
+        String searchFilter =
+                search != null && !search.trim().isEmpty()
+                        ? search.trim()
+                        : "";
+
+        boolean discountedFilter =
+                Boolean.TRUE.equals(onlyDiscounted);
+
+        boolean stockFilter =
+                Boolean.TRUE.equals(inStockOnly);
+
+        return prodottoRepository.filterProducts(
+                catFilter,
+                maxPrice,
+                searchFilter,
+                discountedFilter,
+                stockFilter
+        );
     }
 
     public Prodotto getById(Long id) {
@@ -43,6 +69,27 @@ public class ProdottoService {
         if (body.id() != null) {
             p.setId(body.id());
         }
+
+        p.setCategoria(cat);
+        p.setTitle(body.title());
+        p.setSubtitle(body.subtitle());
+        p.setBadge(body.badge());
+        p.setImage(body.image());
+        p.setRating(body.rating());
+        p.setReviews(body.reviews());
+        p.setOffers(body.offers());
+        p.setPrice(body.price());
+        p.setStockQuantity(body.stockQuantity() != null ? body.stockQuantity() : 0);
+        p.setSpecs(body.specs());
+
+        return prodottoRepository.save(p);
+    }
+
+    public Prodotto update(Long id, ProdottoDTO body) {
+        Prodotto p = this.getById(id);
+
+        Categoria cat = categoriaRepository.findById(body.categoriaId())
+                .orElseThrow(() -> new NotFoundException("Categoria con ID " + body.categoriaId() + " non trovata."));
 
         p.setCategoria(cat);
         p.setTitle(body.title());
