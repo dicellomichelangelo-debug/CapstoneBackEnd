@@ -27,7 +27,6 @@ public class ProdottoService {
             Boolean onlyDiscounted,
             Boolean inStockOnly
     ) {
-        // Evita parametri String null nella query PostgreSQL
         String catFilter =
                 category != null
                         && !category.trim().isEmpty()
@@ -40,74 +39,129 @@ public class ProdottoService {
                         ? search.trim()
                         : "";
 
-        boolean discountedFilter =
-                Boolean.TRUE.equals(onlyDiscounted);
-
-        boolean stockFilter =
-                Boolean.TRUE.equals(inStockOnly);
-
         return prodottoRepository.filterProducts(
                 catFilter,
                 maxPrice,
                 searchFilter,
-                discountedFilter,
-                stockFilter
+                Boolean.TRUE.equals(onlyDiscounted),
+                Boolean.TRUE.equals(inStockOnly)
         );
     }
 
     public Prodotto getById(Long id) {
         return prodottoRepository.findById(id)
-                .orElseThrow(() -> new NotFoundException("Prodotto con ID " + id + " non trovato."));
+                .orElseThrow(() ->
+                        new NotFoundException(
+                                "Prodotto con ID " + id + " non trovato."
+                        )
+                );
     }
 
     public Prodotto save(ProdottoDTO body) {
-        Categoria cat = categoriaRepository.findById(body.categoriaId())
-                .orElseThrow(() -> new NotFoundException("Categoria con ID " + body.categoriaId() + " non trovata."));
+        validateProduct(body);
 
-        Prodotto p = new Prodotto();
+        Categoria categoria = categoriaRepository
+                .findById(body.categoriaId())
+                .orElseThrow(() ->
+                        new NotFoundException(
+                                "Categoria con ID "
+                                        + body.categoriaId()
+                                        + " non trovata."
+                        )
+                );
 
-        if (body.id() != null) {
-            p.setId(body.id());
-        }
+        Prodotto prodotto = new Prodotto();
 
-        p.setCategoria(cat);
-        p.setTitle(body.title());
-        p.setSubtitle(body.subtitle());
-        p.setBadge(body.badge());
-        p.setImage(body.image());
-        p.setRating(body.rating());
-        p.setReviews(body.reviews());
-        p.setOffers(body.offers());
-        p.setPrice(body.price());
-        p.setStockQuantity(body.stockQuantity() != null ? body.stockQuantity() : 0);
-        p.setSpecs(body.specs());
+        prodotto.setCategoria(categoria);
+        prodotto.setTitle(body.title().trim());
+        prodotto.setSubtitle(body.subtitle());
+        prodotto.setBadge(body.badge());
+        prodotto.setImage(body.image());
+        prodotto.setOffers(
+                body.offers() != null ? body.offers() : 0
+        );
+        prodotto.setPrice(body.price());
+        prodotto.setStockQuantity(
+                body.stockQuantity() != null
+                        ? body.stockQuantity()
+                        : 0
+        );
+        prodotto.setSpecs(body.specs());
 
-        return prodottoRepository.save(p);
+        // I valori iniziali non vengono decisi dall'admin.
+        prodotto.setRating(0.0);
+        prodotto.setReviews("0");
+
+        return prodottoRepository.save(prodotto);
     }
 
     public Prodotto update(Long id, ProdottoDTO body) {
-        Prodotto p = this.getById(id);
+        validateProduct(body);
 
-        Categoria cat = categoriaRepository.findById(body.categoriaId())
-                .orElseThrow(() -> new NotFoundException("Categoria con ID " + body.categoriaId() + " non trovata."));
+        Prodotto prodotto = getById(id);
 
-        p.setCategoria(cat);
-        p.setTitle(body.title());
-        p.setSubtitle(body.subtitle());
-        p.setBadge(body.badge());
-        p.setImage(body.image());
-        p.setRating(body.rating());
-        p.setReviews(body.reviews());
-        p.setOffers(body.offers());
-        p.setPrice(body.price());
-        p.setStockQuantity(body.stockQuantity() != null ? body.stockQuantity() : 0);
-        p.setSpecs(body.specs());
+        Categoria categoria = categoriaRepository
+                .findById(body.categoriaId())
+                .orElseThrow(() ->
+                        new NotFoundException(
+                                "Categoria con ID "
+                                        + body.categoriaId()
+                                        + " non trovata."
+                        )
+                );
 
-        return prodottoRepository.save(p);
+        prodotto.setCategoria(categoria);
+        prodotto.setTitle(body.title().trim());
+        prodotto.setSubtitle(body.subtitle());
+        prodotto.setBadge(body.badge());
+        prodotto.setImage(body.image());
+        prodotto.setOffers(
+                body.offers() != null ? body.offers() : 0
+        );
+        prodotto.setPrice(body.price());
+        prodotto.setStockQuantity(
+                body.stockQuantity() != null
+                        ? body.stockQuantity()
+                        : 0
+        );
+        prodotto.setSpecs(body.specs());
+
+        // Rating e recensioni non vengono modificati dall'admin.
+
+        return prodottoRepository.save(prodotto);
     }
 
     public void delete(Long id) {
-        Prodotto p = this.getById(id);
-        prodottoRepository.delete(p);
+        Prodotto prodotto = getById(id);
+        prodottoRepository.delete(prodotto);
+    }
+
+    private void validateProduct(ProdottoDTO body) {
+        if (body.categoriaId() == null) {
+            throw new IllegalArgumentException(
+                    "La categoria è obbligatoria."
+            );
+        }
+
+        if (body.title() == null || body.title().isBlank()) {
+            throw new IllegalArgumentException(
+                    "Il titolo è obbligatorio."
+            );
+        }
+
+        if (body.price() == null || body.price() < 0) {
+            throw new IllegalArgumentException(
+                    "Il prezzo deve essere maggiore o uguale a zero."
+            );
+        }
+
+        if (
+                body.stockQuantity() != null
+                        && body.stockQuantity() < 0
+        ) {
+            throw new IllegalArgumentException(
+                    "La disponibilità non può essere negativa."
+            );
+        }
     }
 }

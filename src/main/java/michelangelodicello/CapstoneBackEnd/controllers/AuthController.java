@@ -3,6 +3,7 @@ package michelangelodicello.CapstoneBackEnd.controllers;
 import michelangelodicello.CapstoneBackEnd.entities.Utente;
 import michelangelodicello.CapstoneBackEnd.payloads.AuthResponseDTO;
 import michelangelodicello.CapstoneBackEnd.payloads.LoginDTO;
+import michelangelodicello.CapstoneBackEnd.payloads.RegisterDTO;
 import michelangelodicello.CapstoneBackEnd.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class AuthController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public Utente register(@RequestBody Utente body) {
+    public Utente register(@RequestBody RegisterDTO body) {
         return authService.registerUser(body);
     }
 

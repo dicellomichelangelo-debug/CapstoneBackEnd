@@ -5,6 +5,7 @@ import michelangelodicello.CapstoneBackEnd.enums.Role;
 import michelangelodicello.CapstoneBackEnd.exceptions.UnauthorizedException;
 import michelangelodicello.CapstoneBackEnd.payloads.AuthResponseDTO;
 import michelangelodicello.CapstoneBackEnd.payloads.LoginDTO;
+import michelangelodicello.CapstoneBackEnd.payloads.RegisterDTO;
 import michelangelodicello.CapstoneBackEnd.repositories.UtenteRepository;
 import michelangelodicello.CapstoneBackEnd.security.JWTTools;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,17 +24,17 @@ public class AuthService {
     @Autowired
     private JWTTools jwtTools;
 
-    public Utente registerUser(Utente body) {
-        if (utenteRepository.existsByEmail(body.getEmail())) {
+    public Utente registerUser(RegisterDTO body) {
+        if (utenteRepository.existsByEmail(body.email())) {
             throw new IllegalArgumentException("Email già in uso nel sistema!");
         }
 
         Utente newUser = new Utente();
-        newUser.setNome(body.getNome());
-        newUser.setCognome(body.getCognome());
-        newUser.setEmail(body.getEmail());
+        newUser.setNome(body.nome());
+        newUser.setCognome(body.cognome());
+        newUser.setEmail(body.email());
 
-        newUser.setPassword(passwordEncoder.encode(body.getPassword()));
+        newUser.setPassword(passwordEncoder.encode(body.password()));
         newUser.setRole(Role.ROLE_USER);
 
         return utenteRepository.save(newUser);

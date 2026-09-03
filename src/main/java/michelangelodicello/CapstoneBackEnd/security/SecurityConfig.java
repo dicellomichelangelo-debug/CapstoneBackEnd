@@ -66,6 +66,15 @@ public class SecurityConfig {
                                 "/api/categories/**"
                         ).permitAll()
 
+                        // RECENSIONI
+                        .requestMatchers(
+                                HttpMethod.POST,
+                                "/api/products/*/reviews"
+                        ).hasAnyAuthority(
+                                "ROLE_USER",
+                                "ROLE_ADMIN"
+                        )
+
                         // ADMIN PRODOTTI
                         .requestMatchers(
                                 HttpMethod.POST,
